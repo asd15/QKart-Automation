@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Tests for QKART Regression">
+    <parameter name="Username" value="testUser" /> 
+    <parameter name="Password" value="abc@123" />
+    <parameter name="ListOfProductsToAddToCart" value="Stylecon 9 Seater RHS Sofa Set;Xtend Smart Watch" />
+    <test name = "Test Execution using testNG">
+        <parameter name="YonexProduct" value="YONEX" />
+        <parameter name="ProductNameToSearchFor" value="YONEX Smash Badminton Racquet" />
+        <parameter name="InvalidProductNameToSearchFor" value="Gesundheit" />
+        <parameter name="ShoesToSearchFor" value="Running Shoes" />
+        <parameter name="ProductNameToSearchFor2" value="Tan Leatherette Weekender Duffle" />
+        <parameter name="AddressDetails" value="Addr line 1 addr Line 2 addr line 3" />
+        <parameter name="WatchToSearchFor" value="Xtend Smart Watch" />
+        <parameter name="LampToSearchFor" value="Yarine Floor Lamp" />
+        <parameter name="SofaToSearchFor" value="Stylecon 9 Seater RHS Sofa Set " />
+        <parameter name="Qty" value="10" />
+        <parameter name="ContactusUserName" value="crio user" />
+        <parameter name="ContactUsEmail" value="criouser@gmail.com" />
+        <parameter name="QueryContent" value="Testing the contact us page" />
+        <groups>
+            <run>
+                <include name="Sanity_test"></include>
+                <include name="Regression_Test"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="QKART_TESTNG.QKART_Tests"></class>
+        </classes>
+    </test> 
+</suite>
